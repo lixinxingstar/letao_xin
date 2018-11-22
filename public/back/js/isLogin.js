@@ -11,5 +11,5 @@ $.ajax({
             location.href = "login.html";
           console.log("错误");
         }
-    }
-})
+}
+    })

@@ -132,3 +132,12 @@ ul{
     font-size: 20px;
 }
 
+
+.lt_content .echarts-left,
+.lt_content .echarts-right{
+    width: 48%;
+    height: 400px;
+    background-color: skyblue;
+
+}
+
