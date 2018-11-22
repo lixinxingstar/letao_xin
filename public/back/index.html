@@ -56,12 +56,34 @@
   </div>
    
 
+  <!-- 退出模态框 -->
+  <!-- 第一个div是蒙层 -->
+  <div class="modal fade" tabindex="-1" id="logoutModal">
+      <!-- 第二个div是内容 -->
+      <!-- 控制大小 -->
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h4 class="modal-title">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="red"><i class="glyphicon glyphicon-info-sign"></i><span>您确定要退出后台管理系统吗?</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div>
+  </div>
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="./js/common.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./js/isLogin.js"></script>
     <script src="./js/login.js"></script>
     
 </body>
