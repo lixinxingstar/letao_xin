@@ -66,4 +66,29 @@ render();
     }
 
   })
+
+  //添加
+  $('#form').on("success.form.bv",function( e ){
+     e.preventDefault();
+
+     $.ajax({
+         type:'post',
+         url:'/category/addTopCategory',
+         data:$('#form').serialize(),
+         success:function( info ){
+             console.log(info);
+             if(info.success){
+                 //添加成功
+                 //关闭模态框
+                 $('#addModal').modal('hide');
+                currentPage = 1;
+                 render();
+
+
+                 //内容和状态全重置
+                 $("#form").data('bootstrapvalidator').resetForm(true);
+             }
+         }
+     })
+  })
 })
