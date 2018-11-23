@@ -39,4 +39,31 @@ render();
         }
     })
   }
+
+
+  //点击添加按钮,显示添加模态框
+
+  $('#addBtn').click(function(){
+      $('#addModal').modal('show');
+  });
+
+
+  //表单校验功能
+  $('#form').bootstrapValidator({
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',//校验成功
+        invalid: 'glyphicon glyphicon-remove',//校验失败
+        validating: 'glyphicon glyphicon-refresh'//校验中
+      },
+      fields:{
+        categoryName:{
+            validators:{
+                notEmpty:{
+                    message:"请输入一级分类名称",
+                },
+             }
+        },
+    }
+
+  })
 })

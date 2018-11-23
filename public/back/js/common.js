@@ -1,9 +1,5 @@
-$(function(){
 
- 
-
-
-    // 开启进度条
+   // 开启进度条
 
 //     NProgress.start();
     
@@ -18,6 +14,14 @@ $(document).ajaxStart(function(){
 $(document).ajaxStop(function(){
     NProgress.done();
 })
+
+
+$(function(){
+
+ 
+
+
+ 
 
 $('#category').click(function(){
     $(this).next().stop().slideToggle();
