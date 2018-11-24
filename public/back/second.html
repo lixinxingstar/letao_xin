@@ -30,8 +30,8 @@
               <li>
                   <a href="javascript:;" id="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
                   <div class="child" style="display:block">
-                    <a  href="first.html">一级分类</a>
-                    <a  class="current" href="second.html">二级分类</a>
+                    <a href="first.html">一级分类</a>
+                    <a class="current" href="second.html">二级分类</a>
                   </div>
                 </li>
               <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
@@ -57,10 +57,10 @@
             <table class="table table-bordered table-hover mt_20">
               <thead>
                 <tr>
-                 <th>序号</th>
-                 <th>一级分类名称</th>
-                 <th>二级分类名称</th>
-                 <th>二级分类LOGO</th>
+                  <th>序号</th>
+                  <th>一级分类名称</th>
+                  <th>二级分类名称</th>
+                  <th>二级分类LOGO</th>
                 </tr>
               </thead>
               <tbody>
@@ -78,21 +78,6 @@
 
     </div>
   </div>
-
-  <script type="text/html" id="secondTpl">
-    {{each rows v i}}
- <tr>
-    <td>{{i + 1 + (page - 1)*size}}</td>
-    <td>{{ v.categoryName }}</td>
-    <td>{{ v.brandName }}</td>
-    <td>
-      <img style="height:50px" src="{{ v.brandLogo }}" alt="">
-    </td>
- </tr>
-  {{ /each}}
-  
-  </script>
- 
    
   <div class="modal fade" tabindex="-1" id="addModal">
    
@@ -143,6 +128,19 @@
     </div>
   </div>
 
+  <script type="text/html" id="secondTpl">
+    {{ each rows v i}}
+    <tr>		
+        <td>{{ i+1 + (page - 1)*size}}</td>
+        <td>{{ v.categoryName }}</td>
+        <td>{{ v.brandName }}</td>
+        <td>
+          <img height= "50px" src="{{ v.brandLogo }}" alt="">
+        </td>
+      </tr>
+      {{ /each }}
+  </script>
+
  
 
     <script src="./lib/jquery/jquery.min.js"></script>
@@ -153,7 +151,7 @@
     <script src="./js/common.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/isLogin.js"></script>
-    <script src="./js/first.js"></script>
-   <script src="./js/second.js"></script>
+    <script src="./js/second.js"></script>
+   
 </body>
 </html>
